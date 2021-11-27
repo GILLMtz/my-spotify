@@ -1,27 +1,66 @@
-# MySpotify
+
+# My-spotify
+
+![img](https://github.com/GILLMtz/my-spotify/blob/main/media/homePage.png?raw=true)
+
+ 
+
+My-spotify is a prototype application based on spotify.
+The application has a multimedia player that allows you to play and pause a song. Additionally, the multimedia controller allows you to advance or rewind a song by clicking with the mouse at any point on the progress bar.
+
+The application obtains the songs through http requests to a [REST API](https://github.com/leifermendez/node-api-tracks) developed in Node.js 
+
+**Content**
+ * [User Interfaces](#problem-introduction)
+   - [Login Form](#login-form)
+   - [Home Page](#home-page)
+   - [Search Page](#search-page)
+   - [History Page](#history-page)
+   - [Liked Songs Page](#liked-songs)
+   - [Media player in action](#media-player-in-action)
+ * [Architecture ](#architecture)
+   - [OverView](#overview)
+   - [Home Module](#home-module)
+   
+
+## Login Form
+![img](https://github.com/GILLMtz/my-spotify/blob/main/media/loginForm.png?raw=true)
+ 
+
+## Home Page
+![img](https://github.com/GILLMtz/my-spotify/blob/main/media/homePage.png?raw=true)
+ 
+## Media player in action
+The multimedia controller allows you to play songs from any page that includes a play button. 
+
+ ![img](https://github.com/GILLMtz/my-spotify/blob/main/media/mediaPlayerActive1.png?raw=true) 
+
+ ![img](https://github.com/GILLMtz/my-spotify/blob/main/media/mediaPlayerActive2.png?raw=true)
+
+ ![img](https://github.com/GILLMtz/my-spotify/blob/main/media/mediaPlayerActive3.png?raw=true)
+
+ ![img](https://github.com/GILLMtz/my-spotify/blob/main/media/mediaPlayerActive4.png?raw=true)   
+
+## Search Page
+![img](https://github.com/GILLMtz/my-spotify/blob/main/media/searchPage.png?raw=true)
+
+## History Page
+![img](https://github.com/GILLMtz/my-spotify/blob/main/media/historyPage.png?raw=true)
+
+## Liked Songs
+![img](https://github.com/GILLMtz/my-spotify/blob/main/media/favoritesPage.png?raw=true)
+
+
+## Architecture 
+
+### OverView
+![img](https://github.com/GILLMtz/my-spotify/blob/main/media/overView.png?raw=true)
+
+### Home Module
+![img](https://github.com/GILLMtz/my-spotify/blob/main/media/homeModule.png?raw=true)
+ 
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 

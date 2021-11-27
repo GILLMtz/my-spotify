@@ -1,5 +1,5 @@
 .media-player {
-    background-color: var(--color-5);
+   background:var(--color-body-background);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -10,6 +10,7 @@
 }
 
 .media-player .media-player--wrapper {
+    background-color: #ffffff14;
     position: relative;
     display: flex;
     justify-content: space-between;

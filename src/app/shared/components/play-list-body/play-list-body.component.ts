@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
-import * as dataRaw from '../../../data/tracks.json';
+import { MultimediaService } from '@shared/services/multimedia.service';
 @Component({
   selector: 'app-play-list-body',
   templateUrl: './play-list-body.component.html',
@@ -9,11 +9,9 @@ import * as dataRaw from '../../../data/tracks.json';
 export class PlayListBodyComponent implements OnInit {
 @Input()tracks:Array<TrackModel>=[];
 optionSort: { property: string | null, order: string } = { property: null, order: 'asc' }
-  constructor() { }
+  constructor(private multimediaService:MultimediaService) { }
 
   ngOnInit(): void {
-    const {data}:any =(dataRaw as any).default;
-    this.tracks=data;
   }
 
   changeSort(property: string): void {
@@ -22,7 +20,8 @@ optionSort: { property: string | null, order: string } = { property: null, order
       property,
       order: order === 'asc' ? 'desc' : 'asc'
     }
-    console.log(this.optionSort);
-
+  }
+  sendPlay(track:TrackModel):void{
+    this.multimediaService.trackInfo$.next(track);
   }
 }

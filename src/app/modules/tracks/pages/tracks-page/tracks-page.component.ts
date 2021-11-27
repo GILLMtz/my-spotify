@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./tracks-page.component.css']
 })
 export class TracksPageComponent implements OnInit {
-
+  trackRecommended!:TrackModel; 
   tracksTranding: Array<TrackModel> = [];
   tracksRandom: Array<TrackModel> = [];
 
@@ -21,6 +21,7 @@ export class TracksPageComponent implements OnInit {
   ngOnInit(): void {
     this.loadDataAll();
     this.loadDataRandom();
+
   }
 
   loadDataAll(): void {
@@ -28,7 +29,6 @@ export class TracksPageComponent implements OnInit {
       subscribe(
         (response: TrackModel[]) => {
           this.tracksTranding = response;
-          console.log('Recibiendo data', response);
         }
       );
   }
@@ -36,9 +36,17 @@ export class TracksPageComponent implements OnInit {
     this.trackService.getAllRandom$().subscribe(
       (response: TrackModel[]) => {
         this.tracksRandom = response;
-        console.log('Recibiendo dataRrandom', response);
+        this.trackRecommended=this.getTrackRecommended(this.tracksRandom);
       }
     );
   }
 
+
+  private getTrackRecommended(data:TrackModel[]):any{
+    if(data!==null && data.length>0){
+      const randomIndex=Math.floor(Math.random() * ((data.length-1) - 0)) + 0;
+      return data[randomIndex];
+    }
+    return {};
+  }
 }

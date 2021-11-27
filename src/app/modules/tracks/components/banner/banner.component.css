@@ -1,0 +1,77 @@
+.component-banner{
+    display: flex;
+    height: 18rem;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    background-color: #ffffff14;
+     
+}
+
+.content-text {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cover {
+    position: relative;
+    width: 17rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-player{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease var(--animation-1);
+}
+.buttons-player .play-btn {
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 50%;
+    color: var(--color-1);
+    font-size: 1.15rem;
+    background-color: var(--color-main);
+   
+ 
+}
+
+ 
+
+.buttons-player .play-btn {
+    display: none;
+}
+
+.cover:hover .buttons-player .play-btn { 
+    display: block;
+
+}
+
+.content-text .title,
+.content-text .sub-title {
+    margin: 0;
+    font-weight: 600;
+}
+
+.content-text .title {
+    font-size: 4rem;
+    letter-spacing: -3px;
+}
+
+
+/**/
+.content-text .small-text {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.content-text .count-tracks {
+    font-weight: 300;
+    opacity: .7;
+    padding-left: .5rem;
+}

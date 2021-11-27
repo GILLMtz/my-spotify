@@ -6,7 +6,7 @@
         <li><i class="uil uil-clock-eight"></i></li>
     </ul>
 
-    <ul class="play-list-rows" *ngFor="let track of tracks | orderList:optionSort.property:optionSort.order">
+    <ul class="play-list-rows" (click)="sendPlay(track)"  *ngFor="let track of tracks | orderList:optionSort.property:optionSort.order">
 
         <li class="track-name">
             <ng-container *ngTemplateOutlet="coverSection;context:{track:track}"></ng-container>
@@ -35,5 +35,4 @@
             <div class="name-track-details">{{track.artist.name}}</div>
         </div>
     </div>
-
 </ng-template>

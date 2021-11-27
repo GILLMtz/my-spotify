@@ -30,6 +30,11 @@
     margin: 0;
     padding: 1rem 0 0 0;
 }
+.play-list-rows:hover{
+    cursor: pointer;
+    background-color: #ffffff14;
+    transition: all ease var(--animation-1);
+}
 
 .play-list-rows .track-name-opacity {
     opacity: .7;

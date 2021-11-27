@@ -14,7 +14,6 @@ src:string=''
   }
   callSearch(term:string):void{
     if(term.length>=3){
-      console.log('Go to Search ',term);
       this.callbackData.emit(term)
     }
       

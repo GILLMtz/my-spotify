@@ -1,6 +1,7 @@
 .card-player {
-    background-color: var(--color-2);
-    height: 5rem;
+    /* background-color: var(--color-2); */
+    background-color: #ffffff14;
+    height: 6rem;
     border-radius: var(--border-radius-1);
     display: flex;
     cursor: pointer;
@@ -9,7 +10,10 @@
 }
 
 .card-player:hover {
-    background-color: #4d4d4d;
+    /* background-color: #4d4d4d; */
+    box-shadow: var(--shadow-1);
+    cursor: pointer;
+    transition: all ease var(--animation-1);
 }
 
 .card-player .cover {
@@ -43,15 +47,18 @@
 }
 
 .card-player .buttons-player .play-btn {
-    color: var(--color-4);
+    color: var(--color-1);
     border: 0;
     font-size: 1.15rem;
     border-radius: 2rem;
-    background-color: var(--color-1);
+    background-color: var(--color-main);
     width: 45px;
     height: 45px;
 }
 
+.card-player.player-small .content-player{
+   font-size: 0.8rem ;
+} 
 .card-player.player-big {
     position: relative;
     flex-direction: column;

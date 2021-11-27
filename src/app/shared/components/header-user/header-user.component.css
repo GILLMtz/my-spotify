@@ -1,0 +1,51 @@
+.component-header-user{
+    margin: 0 0 0 17.5rem;
+  /*   background: rgb(23, 23, 26); */
+     /* background: linear-gradient(90deg, rgba(23, 23, 26, 1) 44%, rgba(24, 24, 24, 1) 100%); */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 20px;
+}
+
+.header-user-profile{
+  display:flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 60px;
+}
+.header-user-profile-name{
+  font-size: 1em;
+}
+.header-user-profile-img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid white;
+}
+
+
+/* Modification */
+.header-user-search {
+  padding: 0 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.header-user-search  input {
+  border: 0;
+  border-radius: 3rem;
+  height: 30px;
+  width: 65%;
+  padding: 0 .75rem;
+  padding-left: 3em;
+  font-size: 90%;
+}
+.header-user-search  i{
+  position: absolute;
+  color:black;
+  font-size: 1.2em;
+  min-width: 1rem;
+  padding-left: 1em;
+}

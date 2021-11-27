@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     padding: .5rem 1rem;
-    /* background-color: red; */
+    background-color: #ffffff14;
 }
 
 .side-bar__list {
@@ -47,4 +47,8 @@
 
 .side-bar__list li {
     cursor: pointer;
+}
+.side-bar__list li:hover {
+    background-color: #ffffff14;
+    transition: all ease var(--animation-1);
 }

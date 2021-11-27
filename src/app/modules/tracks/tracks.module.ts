@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { TracksRoutingModule } from './tracks-routing.module';
 import { TracksPageComponent } from './pages/tracks-page/tracks-page.component';
 import { SharedModule } from '@shared/shared.module';
+import { BannerComponent } from './components/banner/banner.component';
 
 
 @NgModule({
   declarations: [
-    TracksPageComponent
+    TracksPageComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,

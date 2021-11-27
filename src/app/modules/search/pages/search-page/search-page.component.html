@@ -1,0 +1,6 @@
+<div class="search-page">
+    <h1 class="title">Buscar</h1>
+ <app-header-search (callbackData)="receiveData($event)"></app-header-search>
+ <app-categories></app-categories>
+ <app-play-list-body [tracks]="listResults | async"></app-play-list-body>
+</div>

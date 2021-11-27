@@ -1,0 +1,23 @@
+
+
+<div class="component-banner">
+    <div class="cover">
+        <img appImgBroken src="{{track.cover}}" alt="">
+        <div class="buttons-player">
+            <button (click)="sendPlay()" *ngIf="true" class="play-btn">
+                <i class="uil " [ngClass]="{'uil-play':true}"></i>
+            </button>
+            <button *ngIf="false" class="play-btn">
+                <i class="uil uil-play"></i>
+            </button>
+        </div>
+    </div>
+    <div class="content-text">
+        <h1 class="title">Recomendado para ti</h1>
+        <div class="album-information">
+            <h2>{{track.name}}</h2>
+            <h2>{{track.album}} </h2>
+        </div>
+
+    </div>
+</div>

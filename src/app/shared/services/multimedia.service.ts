@@ -26,7 +26,6 @@ export class MultimediaService {
     this.listenAllEvents();
   }
   private setAudio(track: TrackModel): void {
-    console.log('Play a ', track);
     this.audio.src = track.url;
     this.audio.play();
   }
@@ -58,7 +57,7 @@ export class MultimediaService {
 
   }
   private calculateTime=() => {
-    console.log('Evento de timeupdate');
+ 
     const {duration,currentTime}=this.audio;
     this.setTimeElapsed(currentTime);
     this.timeRemaining(currentTime,duration);

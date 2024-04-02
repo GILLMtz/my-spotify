@@ -1,7 +1,7 @@
 
 # My-spotify
 
-![img](https://github.com/GILLMtz/my-spotify/blob/main/media/homePage.png?raw=true)
+![img](./media/overview.gif)
 
  
 My-spotify is a simple app based on Spotify app.

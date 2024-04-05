@@ -22,8 +22,6 @@ export class SearchService {
             artist.name.toLowerCase().includes(term)||
             artist.nickname.toLowerCase().includes(term)||
             album.toLowerCase().includes(term)
-          
-
           )
 
         )

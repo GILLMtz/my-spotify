@@ -13,7 +13,21 @@ export class SearchService {
 
   searchTracks$(term:string):Observable<any>{
     return this.httpClient.get(`${this.URL}/tracks?${term}`).pipe(
-      map((dataRaw:any)=>dataRaw.data)
-    );
+        map((dataRaw: any) => dataRaw.data),
+        map((track: any) =>
+          track.filter(({ name, album, artist }: any) =>
+           name.toLowerCase().includes(term)||
+            artist.name.toLowerCase().includes(term)||
+            artist.nickname.toLowerCase().includes(term)||
+            album.toLowerCase().includes(term)
+          )
+
+        )
+        /*      filter((track) => track.name.toLowerCase().includes(term))
+               
+                */
+
+      );
+  
   }
 }

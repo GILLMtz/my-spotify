@@ -14,5 +14,7 @@ export class SearchPageComponent implements OnInit {
   }
   receiveData(event:string):void{
     this.listResults=this.searchService.searchTracks$(event) ;
+    //this.listResults.subscribe(data=>console.log("data",data));
+    
   }
 }

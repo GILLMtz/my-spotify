@@ -13,6 +13,7 @@ export class MultimediaService {
   public playerStatus$:BehaviorSubject<string>=new BehaviorSubject('paused');
   public playerPercentage$:BehaviorSubject<number>=new BehaviorSubject(0);
   public audio!: HTMLAudioElement;
+  private currentTrack: TrackModel | undefined;
   constructor() {
     this.audio = new Audio();
     this.trackInfo$.subscribe(
@@ -26,6 +27,7 @@ export class MultimediaService {
     this.listenAllEvents();
   }
   private setAudio(track: TrackModel): void {
+    this.currentTrack = track;
     this.audio.src = track.url;
     this.audio.play();
   }
@@ -98,5 +100,9 @@ public seekAudio(percentage: number): void {
   const percentageToSecond = (percentage * duration) / 100
   this.audio.currentTime = percentageToSecond
 
+}
+
+getCurrentTrack(){
+  return this.currentTrack;
 }
 }

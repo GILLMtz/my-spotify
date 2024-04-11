@@ -15,9 +15,9 @@ src:string=''
   ngOnInit(): void {
   }
   callSearch(term:string):void{
-    if(term.length>=3){
+/*     if(term.length>=3){
       this.callbackData.emit(term)
-    }
-      
+    } */
+    this.callbackData.emit(term)
   }
 }

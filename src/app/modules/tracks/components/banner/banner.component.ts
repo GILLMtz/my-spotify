@@ -7,10 +7,12 @@ import { MultimediaService } from '@shared/services/multimedia.service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  @Input() track!:TrackModel;
-  constructor(private multimediaService:MultimediaService ) { }
-
-  ngOnInit(): void { }
+  @Input() track:TrackModel={_id:0,name:'',album:'',cover:'',url:''};
+  constructor(public multimediaService:MultimediaService ) { }
+  playerStatus:boolean=false;
+  ngOnInit(): void {
+    this.multimediaService.playerStatus$.subscribe(state=>this.playerStatus=state==='playing'?true:false)
+   }
 
   sendPlay():void{
     this.multimediaService.trackInfo$.next(this.track);

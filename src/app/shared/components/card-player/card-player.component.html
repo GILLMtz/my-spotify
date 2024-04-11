@@ -1,21 +1,37 @@
 <!-- Diseño del mode (small)-->
-<div *ngIf="mode==='small'" class="card-player player-small">
+<div *ngIf="mode==='small'" class="card-player player-small" data-id="{{track._id}}">
     <img appImgBroken [src]="track.cover" [alt]="track.name" class="cover">
     <div class="content-player">
         {{track.name}}
     </div>
     <div class="buttons-player">
-        <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
-            <i class="uil " [ngClass]="{'uil-play':true}"></i>
+<!--         <button (click)="sendPlay(track)" *ngIf="!playerStatus" class="play-btn">
+            <i class="uil " [ngClass]="{'uil-play':!playerStatus}"></i>
         </button>
-        <button *ngIf="false" class="play-btn">
+        <button *ngIf="playerStatus" class="play-btn">
+            <i class="uil uil-pause"></i>
+        </button> -->
+        <button (click)="sendPlay(track)" *ngIf="track._id!==multimediaService.getCurrentTrack()?._id" class="play-btn">
             <i class="uil uil-play"></i>
         </button>
+
+        <button (click)="multimediaService.togglePlayer()" *ngIf="!playerStatus && track._id===multimediaService.getCurrentTrack()?._id" class="play-btn">
+               
+            <i class="uil uil-play"></i>
+           
+        </button>
+        <button (click)="multimediaService.togglePlayer()" *ngIf="playerStatus&&track._id===multimediaService.getCurrentTrack()?._id" class="play-btn">
+               
+            <i class="uil uil-pause"></i>
+           
+        </button>
+
+        
     </div>
 </div>
 
 <!-- Diseño del mode (big)-->
-<div *ngIf="mode==='big'" class="card-player player-big">
+<div *ngIf="mode==='big'" class="card-player player-big" data-id="{{track._id}}">
     <img appImgBroken [src]="track.cover" [alt]="track.name" class="cover">
     
 
@@ -24,11 +40,30 @@
         <div class="sub-title-track">{{track.name}}</div>
     </div>
     <div class="buttons-player">
-        <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
+        <button (click)="sendPlay(track)" *ngIf="track._id!==multimediaService.getCurrentTrack()?._id" class="play-btn">
+            <i class="uil uil-play"></i>
+        </button>
+
+        <button (click)="multimediaService.togglePlayer()" *ngIf="!playerStatus && track._id===multimediaService.getCurrentTrack()?._id" class="play-btn">
+               
+            <i class="uil uil-play"></i>
+           
+        </button>
+        <button (click)="multimediaService.togglePlayer()" *ngIf="playerStatus&&track._id===multimediaService.getCurrentTrack()?._id" class="play-btn">
+               
+            <i class="uil uil-pause"></i>
+           
+        </button>
+
+
+
+
+
+<!--         <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
             <i class="uil " [ngClass]="{'uil-play':true}"></i>
         </button>
         <button *ngIf="false" class="play-btn">
             <i class="uil uil-play"></i>
-        </button>
+        </button> -->
     </div>
 </div>

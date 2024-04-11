@@ -2,14 +2,31 @@
 
 <div class="component-banner">
     <div class="cover">
-        <img appImgBroken src="{{track.cover}}" alt="">
-        <div class="buttons-player">
+        <img appImgBroken [src]="track.cover" alt="">
+        <div class="buttons-player"><!-- 
             <button (click)="sendPlay()" *ngIf="true" class="play-btn">
                 <i class="uil " [ngClass]="{'uil-play':true}"></i>
             </button>
             <button *ngIf="false" class="play-btn">
                 <i class="uil uil-play"></i>
+            </button> -->
+
+
+            <button (click)="sendPlay()" *ngIf="track._id!==multimediaService.getCurrentTrack()?._id" class="play-btn">
+                <i class="uil uil-play"></i>
             </button>
+    
+            <button (click)="multimediaService.togglePlayer()" *ngIf="!playerStatus && track._id===multimediaService.getCurrentTrack()?._id" class="play-btn">
+                   
+                <i class="uil uil-play"></i>
+               
+            </button>
+            <button (click)="multimediaService.togglePlayer()" *ngIf="playerStatus&&track._id===multimediaService.getCurrentTrack()?._id" class="play-btn">
+                   
+                <i class="uil uil-pause"></i>
+               
+            </button>
+
         </div>
     </div>
     <div class="content-text">
